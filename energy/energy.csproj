@@ -43,6 +43,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -66,7 +94,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\ninja-slider.css" />
+    <Content Include="JS\ninja-slider.js" />
+    <Content Include="login.aspx" />
     <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,14 +110,162 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="100plus.aspx" />
+    <Content Include="aboutus.aspx" />
+    <Content Include="contactus.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="image\1.jpg" />
+    <Content Include="image\10.jpg" />
+    <Content Include="image\11.jpg" />
+    <Content Include="image\12.jpg" />
+    <Content Include="image\13.jpg" />
+    <Content Include="image\14.jpg" />
+    <Content Include="image\2.jpg" />
+    <Content Include="image\3.png" />
+    <Content Include="image\4.jpg" />
+    <Content Include="image\5.jpg" />
+    <Content Include="image\6.jpg" />
+    <Content Include="image\7.jpg" />
+    <Content Include="image\8.jpg" />
+    <Content Include="image\9.jpg" />
+    <Content Include="image\a.PNG" />
+    <Content Include="image\b.PNG" />
+    <Content Include="image\background.jpg" />
+    <Content Include="image\c.PNG" />
+    <Content Include="image\d.PNG" />
+    <Content Include="image\e.PNG" />
+    <Content Include="image\energy.jpg" />
+    <Content Include="image\f.PNG" />
+    <Content Include="image\facebook.png" />
+    <Content Include="image\g.PNG" />
+    <Content Include="image\h.PNG" />
+    <Content Include="image\i.PNG" />
+    <Content Include="image\ig.png" />
+    <Content Include="image\j.PNG" />
+    <Content Include="image\k.PNG" />
+    <Content Include="image\n1.PNG" />
+    <Content Include="image\n10.PNG" />
+    <Content Include="image\n11.PNG" />
+    <Content Include="image\n12.PNG" />
+    <Content Include="image\n2.PNG" />
+    <Content Include="image\n3.PNG" />
+    <Content Include="image\n4.PNG" />
+    <Content Include="image\n5.PNG" />
+    <Content Include="image\n6.PNG" />
+    <Content Include="image\n7.PNG" />
+    <Content Include="image\n8.PNG" />
+    <Content Include="image\n9.PNG" />
+    <Content Include="image\r1.jpg" />
+    <Content Include="image\r2.jpg" />
+    <Content Include="image\r3.jpg" />
+    <Content Include="image\r4.jpg" />
+    <Content Include="image\r5.jpg" />
+    <Content Include="image\s1.PNG" />
+    <Content Include="image\s2.PNG" />
+    <Content Include="image\s3.PNG" />
+    <Content Include="image\s4.PNG" />
+    <Content Include="image\s5.PNG" />
+    <Content Include="image\s6.PNG" />
+    <Content Include="image\twitter.png" />
+    <Content Include="index.aspx" />
+    <Content Include="monsterenergy.aspx" />
+    <Content Include="Nos.aspx" />
+    <Content Include="product.aspx" />
+    <Content Include="Redbull.aspx" />
+    <Content Include="rockstar.aspx" />
+    <Content Include="Shark.aspx" />
+    <Content Include="style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="100plus.aspx.cs">
+      <DependentUpon>100plus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="100plus.aspx.designer.cs">
+      <DependentUpon>100plus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aboutus.aspx.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aboutus.aspx.designer.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contactus.aspx.cs">
+      <DependentUpon>contactus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contactus.aspx.designer.cs">
+      <DependentUpon>contactus.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="monsterenergy.aspx.cs">
+      <DependentUpon>monsterenergy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="monsterenergy.aspx.designer.cs">
+      <DependentUpon>monsterenergy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nos.aspx.cs">
+      <DependentUpon>Nos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nos.aspx.designer.cs">
+      <DependentUpon>Nos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product.aspx.cs">
+      <DependentUpon>product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product.aspx.designer.cs">
+      <DependentUpon>product.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Redbull.aspx.cs">
+      <DependentUpon>Redbull.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Redbull.aspx.designer.cs">
+      <DependentUpon>Redbull.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rockstar.aspx.cs">
+      <DependentUpon>rockstar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rockstar.aspx.designer.cs">
+      <DependentUpon>rockstar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shark.aspx.cs">
+      <DependentUpon>Shark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shark.aspx.designer.cs">
+      <DependentUpon>Shark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
